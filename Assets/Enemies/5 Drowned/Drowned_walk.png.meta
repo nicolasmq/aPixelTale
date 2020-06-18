@@ -1,43 +1,25 @@
 fileFormatVersion: 2
-guid: 0d4d1a5a7cfdfe14d846f6a6d0b3c1e7
+guid: fa8f35cc2b9f20d4db0515eea0c53820
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8386645779307496254
-    second: Rune_0
+      213: -7504767782175319962
+    second: Drowned_walk_0
   - first:
-      213: -4902359646237975460
-    second: Rune_1
+      213: 5188434929497512082
+    second: Drowned_walk_1
   - first:
-      213: 2420670467884986134
-    second: Rune_2
+      213: 6817001287805282660
+    second: Drowned_walk_2
   - first:
-      213: -3217309594128102768
-    second: Rune_3
+      213: -8407223623876842576
+    second: Drowned_walk_3
   - first:
-      213: -6441683378070013353
-    second: Rune_4
+      213: 7678714358822647112
+    second: Drowned_walk_4
   - first:
-      213: 6815779543259444446
-    second: Rune_5
-  - first:
-      213: -2996116242049171636
-    second: Rune_6
-  - first:
-      213: 2939654348323510017
-    second: Rune_7
-  - first:
-      213: -9126697535521978513
-    second: Rune_8
-  - first:
-      213: -3510986646039951083
-    second: Rune_9
-  - first:
-      213: 5446785671126159333
-    second: Rune_10
-  - first:
-      213: -4625152318885694829
-    second: Rune_11
+      213: -7742877066139269157
+    second: Drowned_walk_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -171,13 +153,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rune_0
+      name: Drowned_walk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,62 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ccf85b1916ac9b80800000000000000
-      internalID: -8386645779307496254
+      spriteID: 668d4adc675b9d790800000000000000
+      internalID: -7504767782175319962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rune_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5c96c420e157fbb0800000000000000
-      internalID: -4902359646237975460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rune_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61f209c17f2f79120800000000000000
-      internalID: 2420670467884986134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rune_3
+      name: Drowned_walk_1
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 16
-        height: 16
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,8 +188,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09ac98d58f1d953d0800000000000000
-      internalID: -3217309594128102768
+      spriteID: 2989de03416010840800000000000000
+      internalID: 5188434929497512082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drowned_walk_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469a301ad8ada9e50800000000000000
+      internalID: 6817001287805282660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drowned_walk_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb6c8f48aa835b80800000000000000
+      internalID: -8407223623876842576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drowned_walk_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845b0599606409a60800000000000000
+      internalID: 7678714358822647112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drowned_walk_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd70045f456cb8490800000000000000
+      internalID: -7742877066139269157
       vertices: []
       indices: 
       edges: []
