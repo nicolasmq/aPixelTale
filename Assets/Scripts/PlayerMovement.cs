@@ -50,11 +50,13 @@ public class PlayerMovement : MonoBehaviour {
                     playerRb.AddForce(Vector2.up * jumpSpeed * speed * 0.5f);
                     isGrounded = false;
                     playerAnim.SetTrigger("Jump");
+                    playerAnim.SetBool("isRunning", false);
                 }
                 else{
                     playerRb.AddForce(Vector2.up * jumpSpeed * speed);
                     isGrounded = false;
                     playerAnim.SetTrigger("Jump");
+                    playerAnim.SetBool("isRunning", false);
                 }
             }
         }
