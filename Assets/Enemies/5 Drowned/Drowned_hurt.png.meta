@@ -1,43 +1,13 @@
 fileFormatVersion: 2
-guid: 0d4d1a5a7cfdfe14d846f6a6d0b3c1e7
+guid: 8b2bb5593081c244b8ab0513d33d5aa9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8386645779307496254
-    second: Rune_0
+      213: 5875224828214729999
+    second: Drowned_hurt_0
   - first:
-      213: -4902359646237975460
-    second: Rune_1
-  - first:
-      213: 2420670467884986134
-    second: Rune_2
-  - first:
-      213: -3217309594128102768
-    second: Rune_3
-  - first:
-      213: -6441683378070013353
-    second: Rune_4
-  - first:
-      213: 6815779543259444446
-    second: Rune_5
-  - first:
-      213: -2996116242049171636
-    second: Rune_6
-  - first:
-      213: 2939654348323510017
-    second: Rune_7
-  - first:
-      213: -9126697535521978513
-    second: Rune_8
-  - first:
-      213: -3510986646039951083
-    second: Rune_9
-  - first:
-      213: 5446785671126159333
-    second: Rune_10
-  - first:
-      213: -4625152318885694829
-    second: Rune_11
+      213: -4867828340342178418
+    second: Drowned_hurt_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -171,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rune_0
+      name: Drowned_hurt_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,62 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ccf85b1916ac9b80800000000000000
-      internalID: -8386645779307496254
+      spriteID: f0d5b4d5addf88150800000000000000
+      internalID: 5875224828214729999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rune_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5c96c420e157fbb0800000000000000
-      internalID: -4902359646237975460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rune_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61f209c17f2f79120800000000000000
-      internalID: 2420670467884986134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Rune_3
+      name: Drowned_hurt_1
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 16
-        height: 16
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09ac98d58f1d953d0800000000000000
-      internalID: -3217309594128102768
+      spriteID: e8d33525aeff17cb0800000000000000
+      internalID: -4867828340342178418
       vertices: []
       indices: 
       edges: []
