@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public bool isGrounded = true;
     public bool isRunning = false;
+    public bool isJumping = false;
 
     public Animator playerAnim;
 	// Use this for initialization
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour {
             playerAnim.SetBool("isWalking", true);
             GetComponent<SpriteRenderer>().flipX = true;
             isRunnings();
+            
         }
         else if (Input.GetAxis("Horizontal") > 0)
         {
@@ -50,13 +52,12 @@ public class PlayerMovement : MonoBehaviour {
                     playerRb.AddForce(Vector2.up * jumpSpeed * speed * 0.5f);
                     isGrounded = false;
                     playerAnim.SetTrigger("Jump");
-                    playerAnim.SetBool("isRunning", false);
+                    
                 }
                 else{
                     playerRb.AddForce(Vector2.up * jumpSpeed * speed);
                     isGrounded = false;
                     playerAnim.SetTrigger("Jump");
-                    playerAnim.SetBool("isRunning", false);
                 }
             }
         }
@@ -78,6 +79,7 @@ public class PlayerMovement : MonoBehaviour {
             playerAnim.SetBool("isRunning", true);
             speed = speed + 0.5f;
             isRunning = true;
+            
         }
         else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
