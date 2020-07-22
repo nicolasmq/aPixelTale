@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody2D playerRb;
     public float speed = .5f;
-    public float jumpSpeed = 300;
+    public float jumpSpeed = 200;
 
     public bool isGrounded = true;
     public bool isRunning = false;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Update ()
     {
         playerRb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, playerRb.velocity.y);
-
+        
         if(Input.GetAxis("Horizontal") == 0)
         {
             playerAnim.SetBool("isWalking", false);
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (isRunning)
+                if (isRunning && isGrounded)
                 {
                     // GetComponent<AudioSource>().Play();
                     playerRb.AddForce(Vector2.up * jumpSpeed * speed * 0.5f);
