@@ -1018,7 +1018,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 399654643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 442474513}
+        m_MethodName: ChangeSceneTo
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CreditsScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &399654643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1055,6 +1066,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399654640}
   m_CullTransparentMesh: 0
+--- !u!1 &442474512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442474514}
+  - component: {fileID: 442474513}
+  m_Layer: 0
+  m_Name: SceneChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &442474513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442474512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34a97a43f677df439195115ea9104d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &442474514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442474512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9665125, y: -0.3895588, z: -3.0611625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &536186165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,8 +1682,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.5, y: 0.70000076}
-  m_SizeDelta: {x: -4.1028137, y: -3.3997307}
+  m_AnchoredPosition: {x: -7.19, y: -11}
+  m_SizeDelta: {x: 34.85, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799602733
 MonoBehaviour:
@@ -1649,9 +1703,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Play
-
-'
+  m_text: Jugar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1696,7 +1748,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1722,7 +1774,7 @@ MonoBehaviour:
     textComponent: {fileID: 799602733}
     characterCount: 5
     spriteCount: 0
-    spaceCount: 1
+    spaceCount: 0
     wordCount: 1
     linkCount: 0
     lineCount: 1
@@ -1879,7 +1931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Credits
+  m_text: Creditos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1948,7 +2000,7 @@ MonoBehaviour:
   m_margin: {x: 26.84674, y: 0, z: -57.829254, w: 10.071716}
   m_textInfo:
     textComponent: {fileID: 1024462309}
-    characterCount: 7
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -2060,7 +2112,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1098686020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 442474513}
+        m_MethodName: ChangeSceneTo
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: InstructionsScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1098686020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2646,8 +2709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 129.2}
-  m_SizeDelta: {x: 163.58176, y: 40.402573}
+  m_AnchoredPosition: {x: 9.21, y: 125.21}
+  m_SizeDelta: {x: 174.55, y: 60.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695907764
 MonoBehaviour:
@@ -2692,15 +2755,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 211938140}
-        m_MethodName: EmpezarJuego
-        m_Mode: 1
+      - m_Target: {fileID: 442474513}
+        m_MethodName: ChangeSceneTo
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: FirstStage
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1695907765
@@ -2908,7 +2971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Opciones
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -2977,7 +3040,7 @@ MonoBehaviour:
   m_margin: {x: 26.84674, y: 0, z: -45.734467, w: 10.071716}
   m_textInfo:
     textComponent: {fileID: 1871559543}
-    characterCount: 7
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -3358,7 +3421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Instructions
+  m_text: 'Instrucciones
 
 '
   m_isRightToLeft: 0
@@ -3429,7 +3492,7 @@ MonoBehaviour:
   m_margin: {x: 26.84674, y: 0, z: -194.78482, w: 10.071716}
   m_textInfo:
     textComponent: {fileID: 2004536169}
-    characterCount: 13
+    characterCount: 14
     spriteCount: 0
     spaceCount: 1
     wordCount: 1

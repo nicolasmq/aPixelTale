@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SecondStage.unity
     guid: e80b72bcd76fa1d4a8050771a356aabb
   - enabled: 1
-    path: Assets/Scenes/LoseScene.unity
-    guid: 3bd5bfceee86f8b44ae7e03d46b989b6
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 37867ff97a5e73e4b924bb4a719e816a
+  - enabled: 1
+    path: Assets/Scenes/InstructionsScene.unity
+    guid: 0e25370df739e1f46916931db84f3f65
   m_configObjects: {}
