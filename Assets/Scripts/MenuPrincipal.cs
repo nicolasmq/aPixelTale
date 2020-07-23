@@ -16,9 +16,25 @@ public class MenuPrincipal : MonoBehaviour
     {
         
     }
+    public void VolverMenu()
+    {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+
+    }
+
     public void EmpezarJuego()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void EmpezarInstrucciones()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+    }
+    public void EmpezarCreditos()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
 
     public void CerrarJuego()
