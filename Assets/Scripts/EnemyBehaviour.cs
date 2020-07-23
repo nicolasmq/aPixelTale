@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    CapsuleCollider2D collider2D;
+   
     Rigidbody2D enemyRb;
     SpriteRenderer enemySpriteRend;
     Animator enemyAnim;
@@ -22,7 +22,7 @@ public class EnemyBehaviour : MonoBehaviour
         enemyAnim = GetComponent<Animator>();
         enemyPart = GameObject.Find("EnemyParticle").GetComponent<ParticleSystem>();
         enemyAudio = GetComponent<AudioSource>();
-        collider2D = GetComponent<CapsuleCollider2D>();
+        
     }
 	
 	// Update is called once per frame
@@ -60,6 +60,21 @@ public class EnemyBehaviour : MonoBehaviour
                 enemyPart.transform.position = transform.position;
                 enemyPart.Play();
                 enemyAudio.Play();
+                enemyAnim.SetBool("isDead", true);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Player")
+        {
+            if (transform.position.y + .03f < collision.transform.position.y)
+            {
+                enemyPart.transform.position = transform.position;
+               // enemyPart.Play();
+                //enemyAudio.Play();
                 enemyAnim.SetBool("isDead", true);
             }
         }

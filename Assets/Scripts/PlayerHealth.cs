@@ -29,10 +29,7 @@ public class PlayerHealth : MonoBehaviour {
         }
         if (collision.gameObject.CompareTag("Falling"))
         {
-            /*playerAnim.SetBool("isAlive", false);
-            playerAlive.SetActive(false);
-            playerDeath.SetActive(true);
-            playerAnim.SetTrigger("Death");*/
+            
             LoseScene();
 
         }
@@ -81,10 +78,10 @@ public class PlayerHealth : MonoBehaviour {
 
     public void LoseScene()
     {
-        StartCoroutine(toLoseScene(SceneManager.GetActiveScene().buildIndex + 2 ));
+        StartCoroutine(toLoseScene());
     }
 
-    IEnumerator toLoseScene(int indexScene)
+    IEnumerator toLoseScene()
     {
         playerAlive.SetActive(false);
         playerDeath.SetActive(true);
@@ -92,6 +89,6 @@ public class PlayerHealth : MonoBehaviour {
 
         yield return new WaitForSeconds(1f);
 
-        SceneManager.LoadScene(indexScene);
+        //SceneManager.LoadScene(indexScene);
     }
 }

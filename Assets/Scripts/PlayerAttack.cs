@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float attackPoints = 1f;
+    public Animator attackAnim;
+
     void Start()
     {
         
@@ -13,6 +15,17 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey("f"))
+        {
+            attackAnim.SetTrigger("Attack");
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+
+        }
     }
 }

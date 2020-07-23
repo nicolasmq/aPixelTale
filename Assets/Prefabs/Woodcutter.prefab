@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3211596069553155815}
   - component: {fileID: 3211596069553155812}
   - component: {fileID: 1000452858090823079}
+  - component: {fileID: 6403779418182348808}
+  - component: {fileID: 8535835906475913473}
   m_Layer: 0
   m_Name: Woodcutter
   m_TagString: Player
@@ -187,3 +189,40 @@ MonoBehaviour:
   isRunning: 0
   isJumping: 0
   playerAnim: {fileID: 3211596069553155809}
+--- !u!58 &6403779418182348808
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3211596069553155813}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.15373099, y: 0.11380082}
+  serializedVersion: 2
+  m_Radius: 0.03635657
+--- !u!114 &8535835906475913473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3211596069553155813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f7d5349bf27734ab4b53bc87c7a85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  changeScene: {fileID: 0}
+  deathAnim: {fileID: 0}
+  damageAnim: {fileID: 3211596069553155809}
+  playerAlive: {fileID: 3211596069553155813}
+  playerDeath: {fileID: 0}
