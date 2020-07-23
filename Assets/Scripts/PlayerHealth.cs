@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour {
     public Animator damageAnim;
     public GameObject playerAlive;
     public GameObject playerDeath;
-
+  
     //public SceneChanger changeScene;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -93,5 +93,6 @@ public class PlayerHealth : MonoBehaviour {
         yield return new WaitForSeconds(1f);
 
         SceneManager.LoadScene(indexScene);
+        
     }
 }
