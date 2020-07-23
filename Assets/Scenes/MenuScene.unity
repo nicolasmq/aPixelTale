@@ -3402,7 +3402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Instrucctions
+  m_text: 'Instructions
 
 '
   m_isRightToLeft: 0
@@ -3473,7 +3473,7 @@ MonoBehaviour:
   m_margin: {x: 26.84674, y: 0, z: -194.78482, w: 10.071716}
   m_textInfo:
     textComponent: {fileID: 2004536169}
-    characterCount: 14
+    characterCount: 13
     spriteCount: 0
     spaceCount: 1
     wordCount: 1
