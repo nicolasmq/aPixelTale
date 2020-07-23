@@ -15,9 +15,9 @@ public class PlayerHealth : MonoBehaviour {
     public Animator damageAnim;
     public GameObject playerAlive;
     public GameObject playerDeath;
-  
+    
     //public SceneChanger changeScene;
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
