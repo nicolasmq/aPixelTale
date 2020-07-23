@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 887961152957920829}
   - component: {fileID: 887961152957920828}
   - component: {fileID: 887961152957920827}
-  - component: {fileID: 7678239860182421973}
+  - component: {fileID: 9050075843500503561}
+  - component: {fileID: 2731128359028391246}
   m_Layer: 0
   m_Name: Big_bloated
   m_TagString: Untagged
@@ -102,17 +103,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &7678239860182421973
-CapsuleCollider:
+--- !u!70 &9050075843500503561
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887961152957920826}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.13681078
-  m_Height: 0.47289777
-  m_Direction: 1
-  m_Center: {x: 0.04782629, y: -0.12355113, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.043444633, y: -0.121979}
+  m_Size: {x: 0.2855549, y: 0.47604203}
+  m_Direction: 0
+--- !u!50 &2731128359028391246
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887961152957920826}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 2
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

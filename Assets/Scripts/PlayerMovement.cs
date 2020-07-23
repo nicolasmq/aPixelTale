@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             playerAnim.SetBool("isWalking", true);
             GetComponent<SpriteRenderer>().flipX = true;
+            gameObject.GetComponent<Collider2D>().offset = new Vector2(0.07f, -0.067f);
             isRunnings();
             
         }
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             playerAnim.SetBool("isWalking", true);
             GetComponent<SpriteRenderer>().flipX = false;
+            gameObject.GetComponent<Collider2D>().offset = new Vector2(-0.07f, -0.067f);
             isRunnings();
         }
                 

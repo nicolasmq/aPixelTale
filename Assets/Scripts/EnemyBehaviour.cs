@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
+    CapsuleCollider2D collider2D;
     Rigidbody2D enemyRb;
     SpriteRenderer enemySpriteRend;
     Animator enemyAnim;
@@ -21,6 +22,7 @@ public class EnemyBehaviour : MonoBehaviour
         enemyAnim = GetComponent<Animator>();
         enemyPart = GameObject.Find("EnemyParticle").GetComponent<ParticleSystem>();
         enemyAudio = GetComponent<AudioSource>();
+        collider2D = GetComponent<CapsuleCollider2D>();
     }
 	
 	// Update is called once per frame
@@ -29,16 +31,25 @@ public class EnemyBehaviour : MonoBehaviour
         enemyRb.velocity = Vector2.right * speed;
 
         if (speed > 0)
-            enemySpriteRend.flipX = false;
-        else if (speed < 0)
             enemySpriteRend.flipX = true;
-
+        else if (speed < 0)
+            enemySpriteRend.flipX = false;
+        
         if (timeBeforeChange < Time.time)
         {
             speed *= -1;
             timeBeforeChange = Time.time + delay;
         }
-	}
+
+        if (enemySpriteRend.flipX)
+        {
+            gameObject.GetComponent<Collider2D>().offset = new Vector2(-0.05f, -0.1f);
+        }
+        else
+        {
+            gameObject.GetComponent<Collider2D>().offset = new Vector2(0.05f, -0.1f);
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

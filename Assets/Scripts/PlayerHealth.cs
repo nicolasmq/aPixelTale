@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
@@ -8,6 +9,12 @@ public class PlayerHealth : MonoBehaviour {
     int health = 3;
     public Image[] hearts;
     bool hasCooldown = false;
+    public SceneChanger changeScene;
+
+    public Animator deathAnim;
+    public Animator damageAnim;
+    public GameObject playerAlive;
+    public GameObject playerDeath;
 
     //public SceneChanger changeScene;
 
@@ -20,8 +27,17 @@ public class PlayerHealth : MonoBehaviour {
                 SubstractHealth();
             }
         }
-    }
+        if (collision.gameObject.CompareTag("Falling"))
+        {
+            /*playerAnim.SetBool("isAlive", false);
+            playerAlive.SetActive(false);
+            playerDeath.SetActive(true);
+            playerAnim.SetTrigger("Death");*/
+            LoseScene();
 
+        }
+
+    }
     void SubstractHealth()
     {
         if (!hasCooldown)
@@ -29,17 +45,20 @@ public class PlayerHealth : MonoBehaviour {
             if(health > 0)
             {
                 health--;
+                damageAnim.SetTrigger("Damage");
                 hasCooldown = true;
 
                 StartCoroutine(Cooldown());
             }
 
-            /*if(health <= 0)
+            if (health <= 0)
             {
-                changeScene.ChangeSceneTo("LoseScene");
-            }*/
+                LoseScene();
+            }
 
             EmptyHearts();
+
+
         }
     }
 
@@ -58,5 +77,21 @@ public class PlayerHealth : MonoBehaviour {
         hasCooldown = false;
 
         StopCoroutine(Cooldown());
+    }
+
+    public void LoseScene()
+    {
+        StartCoroutine(toLoseScene(SceneManager.GetActiveScene().buildIndex + 2 ));
+    }
+
+    IEnumerator toLoseScene(int indexScene)
+    {
+        playerAlive.SetActive(false);
+        playerDeath.SetActive(true);
+        deathAnim.SetTrigger("Death");
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(indexScene);
     }
 }
