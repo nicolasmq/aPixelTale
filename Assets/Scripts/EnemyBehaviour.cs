@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,18 +16,27 @@ public class EnemyBehaviour : MonoBehaviour
     public float delay = .5f;
     public float speed = .3f;
 
+    public int maxHealth = 100;
+    int currentHealth;
+
+    
+
 	void Start ()
     {
+
+        currentHealth = maxHealth;
         enemyRb = GetComponent<Rigidbody2D>();
         enemySpriteRend = GetComponent<SpriteRenderer>();
         enemyAnim = GetComponent<Animator>();
-        enemyPart = GameObject.Find("EnemyParticle").GetComponent<ParticleSystem>();
+        //enemyPart = GameObject.Find("EnemyParticle").GetComponent<ParticleSystem>();
         enemyAudio = GetComponent<AudioSource>();
+
         
     }
-	
-	// Update is called once per frame
-	void Update ()
+    
+
+    // Update is called once per frame
+    void Update ()
     {
         enemyRb.velocity = Vector2.right * speed;
 
@@ -50,38 +60,29 @@ public class EnemyBehaviour : MonoBehaviour
             gameObject.GetComponent<Collider2D>().offset = new Vector2(0.05f, -0.1f);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    public void TakeDamage(int damage)
     {
-        if(collision.gameObject.tag == "Player")
+        enemyAnim.SetTrigger("Damage");
+        currentHealth -= damage;
+        gameObject.GetComponent<Transform>().position = new Vector2(enemyRb.position.x + 0.05f, enemyRb.position.y);
+
+
+        if (currentHealth <= 0)
         {
-            if(transform.position.y + .03f < collision.transform.position.y)
-            {
-                enemyPart.transform.position = transform.position;
-                enemyPart.Play();
-                enemyAudio.Play();
-                enemyAnim.SetBool("isDead", true);
-            }
+            Die();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Die()
     {
+        Debug.Log("Enemy Died!!");
 
-        if (collision.gameObject.tag == "Player")
-        {
-            if (transform.position.y + .03f < collision.transform.position.y)
-            {
-                enemyPart.transform.position = transform.position;
-               // enemyPart.Play();
-                //enemyAudio.Play();
-                enemyAnim.SetBool("isDead", true);
-            }
-        }
+        enemyAnim.SetBool("isDead", true);
+
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
     }
 
-    public void DisableEnemy()
-    {
-        gameObject.SetActive(false);
-    }
+    
 }
