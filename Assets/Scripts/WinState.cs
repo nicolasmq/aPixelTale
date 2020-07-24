@@ -25,6 +25,7 @@ public class WinState : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            
             winScene();
         }
     }

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1542348218042142274}
   - component: {fileID: 8149002145301180630}
   - component: {fileID: 716119108908731435}
+  - component: {fileID: 3396792550872292271}
+  - component: {fileID: 4292235233325311291}
   m_Layer: 0
   m_Name: Drowned
   m_TagString: Enemy
@@ -118,3 +120,39 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0958482, y: -0.084346324}
   m_Size: {x: 0.1962893, y: 0.31130737}
   m_Direction: 0
+--- !u!114 &3396792550872292271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903459884902369374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e36e49a52f30a4a839b608d2c0e1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.5
+  speed: 0.3
+  maxHealth: 100
+--- !u!50 &4292235233325311291
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2903459884902369374}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

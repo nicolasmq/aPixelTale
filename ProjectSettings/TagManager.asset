@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Falling
   - CheckPoint
+  - Boss
+  - Rune
   layers:
   - Default
   - TransparentFX

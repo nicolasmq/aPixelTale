@@ -32,7 +32,15 @@ public class Collectable : MonoBehaviour {
             //collectablePart.Play();
             collectableAudio.Play();
             gameObject.SetActive(false);
-            collectableQuantity++;
+            if(gameObject.tag == "Rune")
+            {
+                collectableQuantity *= 2;
+            }
+            else
+            {
+                collectableQuantity++;
+            }
+            
             collectableText.text = collectableQuantity.ToString();
         }
     }
