@@ -16,7 +16,13 @@ public class PlayerHealth : MonoBehaviour {
     public GameObject playerAlive;
     public GameObject playerDeath;
 
+    public GameObject mainCameraSound;
+
+    public GameObject deathAudio;
+
     //public SceneChanger changeScene;
+
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -29,7 +35,8 @@ public class PlayerHealth : MonoBehaviour {
         }
         if (collision.gameObject.CompareTag("Falling"))
         {
-            
+            mainCameraSound.GetComponent<AudioSource>().Stop();
+            deathAudio.GetComponent<AudioSource>().Play();
             LoseScene();
 
         }
@@ -50,6 +57,8 @@ public class PlayerHealth : MonoBehaviour {
 
             if (health <= 0)
             {
+                mainCameraSound.GetComponent<AudioSource>().Stop();
+                deathAudio.GetComponent<AudioSource>().Play();
                 LoseScene();
             }
 

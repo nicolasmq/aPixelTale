@@ -19,6 +19,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
+
         attackAudio = GetComponent<AudioSource>();
     }
 
@@ -46,6 +47,11 @@ public class PlayerAttack : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<EnemyBehaviour>().TakeDamage(attackDamage);
+        }
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<BossBehaviour>().TakeDamage(attackDamage);
         }
     }
     private void OnDrawGizmosSelected()

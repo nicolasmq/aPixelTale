@@ -79,8 +79,8 @@ public class EnemyBehaviour : MonoBehaviour
         Debug.Log("Enemy Died!!");
 
         enemyAnim.SetBool("isDead", true);
-
         GetComponent<Collider2D>().enabled = false;
+        enemyRb.velocity = new Vector2(0f, 0f);
         this.enabled = false;
     }
 
