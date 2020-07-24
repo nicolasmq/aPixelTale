@@ -4,28 +4,56 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float attackPoints = 1f;
+    public Transform attackPoints;
     public Animator attackAnim;
+
+    public LayerMask enemyLayers;
+
+    public float attackRange = 0.5f;
+    public int attackDamage = 20;
+
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
+    AudioSource attackAudio;
 
     void Start()
     {
-        
+        attackAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("f"))
+        if (Time.time >= nextAttackTime)
         {
-            attackAnim.SetTrigger("Attack");
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
+        
     }
+    
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    void attack()
     {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
+        attackAnim.SetTrigger("Attack");
+        attackAudio.Play();
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoints.position, attackRange, enemyLayers);
 
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<EnemyBehaviour>().TakeDamage(attackDamage);
         }
     }
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoints == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoints.position, attackRange);        
+    }
+
 }

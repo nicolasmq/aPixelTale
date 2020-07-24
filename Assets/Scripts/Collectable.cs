@@ -9,14 +9,14 @@ public class Collectable : MonoBehaviour {
     public Text collectableText;
 
     //ParticleSystem collectablePart;
-    //AudioSource collectableAudio;
+    AudioSource collectableAudio;
 
 	// Use this for initialization
 	void Start () {
-        /*collectableQuantity = 0;
+        collectableQuantity = 0;
         collectableText = GameObject.Find("CollectableQuantityText").GetComponent<Text>();
-        collectablePart = GameObject.Find("CollectableParticle").GetComponent<ParticleSystem>();
-        collectableAudio = GetComponentInParent<AudioSource>();*/
+        //collectablePart = GameObject.Find("CollectableParticle").GetComponent<ParticleSystem>();
+        collectableAudio = GetComponentInParent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -28,9 +28,9 @@ public class Collectable : MonoBehaviour {
     {
         if(col.tag == "Player")
         {
-            /*collectablePart.transform.position = transform.position;
-            collectablePart.Play();
-            collectableAudio.Play();*/
+            //collectablePart.transform.position = transform.position;
+            //collectablePart.Play();
+            collectableAudio.Play();
             gameObject.SetActive(false);
             collectableQuantity++;
             collectableText.text = collectableQuantity.ToString();

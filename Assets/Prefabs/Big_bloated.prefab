@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 887961152957920829}
   - component: {fileID: 887961152957920828}
   - component: {fileID: 887961152957920827}
-  - component: {fileID: 9050075843500503561}
-  - component: {fileID: 2731128359028391246}
+  - component: {fileID: 5915755592141131568}
+  - component: {fileID: 469988564434003564}
+  - component: {fileID: 8039075113579848075}
   m_Layer: 0
   m_Name: Big_bloated
   m_TagString: Untagged
@@ -103,7 +104,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &9050075843500503561
+--- !u!70 &5915755592141131568
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,10 +117,10 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.043444633, y: -0.121979}
-  m_Size: {x: 0.2855549, y: 0.47604203}
+  m_Offset: {x: 0.06263757, y: -0.11274743}
+  m_Size: {x: 0.294065, y: 0.49450517}
   m_Direction: 0
---- !u!50 &2731128359028391246
+--- !u!50 &469988564434003564
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -131,12 +132,28 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8039075113579848075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887961152957920826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376c32a0aa81f1f488252d315eb89277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dectectedDistance: 5
+  startTimeBtwShots: 2
+  player: {fileID: 0}
+  proyectil: {fileID: 23526430478185726, guid: 244374c9230f98843ba165e61606e485, type: 3}

@@ -63,6 +63,14 @@ public class PlayerMovement : MonoBehaviour {
                 }
             }
         }
+
+        if (speed > 1f)
+        {
+            speed = 1f;
+        }else if(speed < 0.5f)
+        {
+            speed = 0.5f;
+        }
         
     }
 
@@ -71,6 +79,7 @@ public class PlayerMovement : MonoBehaviour {
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            playerAnim.ResetTrigger("Jump");
         }
     }
 
